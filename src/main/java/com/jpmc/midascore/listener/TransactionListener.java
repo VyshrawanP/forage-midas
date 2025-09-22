@@ -1,4 +1,4 @@
-package com.jpmc.midascore;   // use your own package
+package com.jpmc.midascore.listener;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
