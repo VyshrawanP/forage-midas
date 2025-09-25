@@ -1,28 +1,29 @@
 package com.jpmc.midascore.foundation;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.math.BigDecimal;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Balance {
-    private float amount;
+    private String userId;
+    private BigDecimal balance;
 
-    public Balance() {
+    public Balance(String userId, BigDecimal balance) {
+        this.userId = userId;
+        this.balance = balance;
     }
 
-    public Balance(float amount) {
-        this.amount = amount;
+    public String getUserId() {
+        return userId;
     }
 
-    public float getAmount() {
-        return amount;
-    }
-
-    public void setAmount(float amount) {
-        this.amount = amount;
+    public BigDecimal getBalance() {
+        return balance;
     }
 
     @Override
     public String toString() {
-        return "Balance {amount=" + amount + "}";
+        return "Balance{" +
+                "userId='" + userId + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }
